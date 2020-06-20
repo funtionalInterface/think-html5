@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>桂林电子科技大学</title>
+    <link rel="shortcut icon" href="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.ico">
+    <link href="/think/public/css/login.css" rel="stylesheet" rev="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <!-- include main css -->
+    <link rel="stylesheet" type="text/css" href="/think/public/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/think/public/css/video.css"/>
+    <script src="/think/public/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<!--视频切换-->
+<script>
+    $(function () {
+        $("ul[id='list'] li a").on('click', function () {
+            var context = $(this).attr('context')
+            $("div[class='box'] video").attr('src', context)
+        })
+    })
+</script>
+<!-----banner---->
+<img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.png" height=56px alt="logo"
+     style="margin: 15px;margin-left: 140px;"/>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb" style="position:absolute;top: 30px;left:300px;width: 50%;background-color:transparent">
+        <li class="breadcrumb-item "><a href="/think/public/index.php/index/index">首页</a></li>
+        <li class="breadcrumb-item "><a href="/think/public/index.php/index/scenicOverview">校园概况</a></li>
+        <li class="breadcrumb-item "><a href="/think/public/index.php/index/courtTravel">校园生活</a></li>
+        <li class="breadcrumb-item "><a href="/think/public/index.php/index/comfortable">教育教学</a></li>
+        <li class="breadcrumb-item "><a href="/think/public/index.php/index/news">新闻动态</a></li>
+        <li class="breadcrumb-item "><a href="/think/public/index.php/index/feedback">留言中心</a></li>
+        <li class="breadcrumb-item "><a href="/think/public/index.php/index/contact">联系我们</a></li>
+    </ol>
+</nav>
+<div class="banner">
+    <div id="left">
+        <div class="box">
+            <video src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/video/test1.mp4" autoplay controls loop></video>
+            <ul id="list">
+                <li>
+                    <a href="#" context="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/video/test1.mp4"><img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/1716040824.png"
+                                                                             alt="1716040824-郑雅各">
+                        <p><span>1716040824-郑雅各</span></p></a>
+                </li>
+                <li>
+                    <a href="#" context="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/video/test2.mp4"> <img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/1716040825.png"
+                                                                              alt="1716040825-王荣基">
+                        <p><span>1716040825-王荣基</span></p></a>
+                </li>
+                <li>
+                    <a href="#" context="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/video/test3.mp4"><img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/1716040828.png"
+                                                                             alt="1716040828-黄军">
+                        <p><span>1716040828-黄军</span></p></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p id="bottom">
+        地址：广西北海银海区南珠大道9号
+        Copyright© 2020 版权所有：桂林电子科技大学北海校区
+    </p>
+</div>
+
+</body>
+</html>

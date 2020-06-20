@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>桂林电子科技大学</title>
+    <link rel="shortcut icon" href="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.ico">
+    <link href="/think/public/css/login.css" rel="stylesheet" rev="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <!-- include main css -->
+    <link rel="stylesheet" type="text/css" href="/think/public/css/bootstrap.css"/>
+    <script src="/think/public/js/jquery-1.8.3.min.js"></script>
+
+</head>
+<style type="text/css">
+    body {
+        background: url('https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/banner2.jpg');
+    }
+
+    video {
+        width: 500px;
+    }
+
+    nav > ol > li > a {
+        color: #FFFFFF;
+    }
+</style>
+<body>
+
+<!-----banner---->
+
+<img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.png" height=56px alt="logo"
+     style="margin: 15px;margin-left: 140px;"/>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb" style="position:absolute;top: 30px;left:300px;width: 50%;background-color:transparent">
+        <li class="breadcrumb-item "><a href="#">首页</a></li>
+        <li class="breadcrumb-item "><a href="#">校园概况</a></li>
+        <li class="breadcrumb-item "><a href="#">校园生活</a></li>
+        <li class="breadcrumb-item "><a href="#">教育教学</a></li>
+        <li class="breadcrumb-item "><a href="#">新闻动态</a></li>
+        <li class="breadcrumb-item "><a href="#">留言中心</a></li>
+        <li class="breadcrumb-item "><a href="#">联系我们</a></li>
+    </ol>
+</nav>
+<div class="banner">
+    
+    <div class="login-aside">
+        <div id="o-box-down">
+            <div class="login-name">用户登录</div>
+            <form class="registerform">
+                <div class="fm-item">
+                    <input type="text" placeholder="请输入账号" maxlength="100" id="username">
+                </div>
+
+                <div class="fm-item">
+                    <input type="password" placeholder="请输入密码" maxlength="100" id="password">
+                </div>
+
+                <div class="fm-item yzm">
+                    <input type="text" placeholder="输入验证码" id="yzm">
+                    <div class="yzm-img left"><img id="captcha" src="{:captcha_src()}" height=35px width=100px
+                                                   onclick="this.src = '{:captcha_src()}?id=' + Math.random()"/></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="fm-item remember">
+                    <input class="left" type="checkbox">
+                    <p class="left">记住我</p>
+                </div>
+                <div class="clearfix"></div>
+                <div id="sumb" class="login-btn" onclick="window.location.href='/think/public/index.php/index/index'">
+                    登录
+                </div>
+            </form>
+        </div>
+    </div>
+    <p id="bottom">
+        地址：广西北海银海区南珠大道9号
+        Copyright© 2020 版权所有：桂林电子科技大学北海校区
+    </p>
+</div>
+<style type="text/css">
+    #left {
+        color: #FFFFFF;
+        position: absolute;
+        top: 200px;
+        left: 300px;
+    }
+
+    #bottom {
+        font-weight: bold;
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 10px;
+        left: 500px;
+        opacity: 0.8;
+    }
+</style>
+</body>
+</html>

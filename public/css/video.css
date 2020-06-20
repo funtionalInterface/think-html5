@@ -1,0 +1,64 @@
+body {
+    background: url('https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/banner2.jpg');
+}
+nav > ol > li > a {
+    color: #FFFFFF;
+}
+.box {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background: #262625;
+    position: absolute;
+}
+video {
+    width: 800px;
+    position: absolute;
+    /*  left: 20px;
+      top: 30px;*/
+}
+#list {
+    width: 350px;
+    height: 340px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    background: #171717;
+}
+#list li {
+    width: 350px;
+    height: 114px;
+}
+
+li img {
+    width: 150px;
+    float: left;
+}
+
+li p {
+    margin-top: 5px;
+    width: 150px;
+    padding-right: 30px;
+    float: right;
+    color: #ccc;
+}
+
+p span {
+    font-size: 12px;
+}
+#left {
+    color: #FFFFFF;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+#bottom {
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 10px;
+    left: 500px;
+    opacity: 0.8;
+}
