@@ -9,7 +9,7 @@ use think\View;
 class Index extends BaseController
 {
     public function beian(){
-        redirect("http://www.beian.miit.gov.cn");
+        return redirect("http://www.beian.miit.gov.cn");
     }
     public function login()
     {
