@@ -17,7 +17,7 @@
         <link href="/think/public/font-awesome-4.5.0/css/font-awesome.min.css" rel='stylesheet'
               type='text/css' media="all"/>
         <link rel="stylesheet" type="text/css" href="/think/public/css/animate.css"/>
-        <script src="/think/public/js/jquery-1.8.3.min.js"></script>
+        <script src="/think/public/js/jquery-3.3.1.min.js"></script>
         <!--移动端导航-->
         <script src="/think/public/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="/think/public/js/public.js"></script>
@@ -27,10 +27,22 @@
         <!--placeholder-->
         <script src="/think/public/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
 
-
     </head>
     <body>
+        <script >
+            $(function () {
+                $('#login').on('click', function () {
+                    window.location.href = "/think/public/index.php/index/login"
+                })
 
+                $('input, textarea').placeholder();
+            });
+            $("a[href='/think/public/index.php/index/beian']").on('mouseover',function () {
+                $(this).css('color','rgb(255,106,0)')
+            }).on('mouseout',function () {
+                $(this).css('color','rgb(255,255,255)')
+            })
+        </script>
         <div>
             <!--header-->
             <header class="header_zi">
@@ -350,19 +362,6 @@
             </ul>
         </nav>
         </div>
-        <script >
-            $(function () {
-                $('#login').on('click', function () {
-                    window.location.href = "/think/public/index.php/index/login"
-                })
 
-                $('input, textarea').placeholder();
-            });
-            $("a[href='www.beian.miit.gov.cn']").on('mouseover',function () {
-                $(this).css('color','rgb(255,106,0)')
-            }).on('mouseout',function () {
-                $(this).css('color','rgb(255,255,255)')
-            })
-        </script>
     </body>
 </html>

@@ -6,6 +6,7 @@
     <title>桂林电子科技大学</title>
     <link rel="shortcut icon" href="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.ico">
     <link href="/think/public/css/login.css" rel="stylesheet" rev="stylesheet" type="text/css" media="all"/>
+    <script type="text/javascript" src="/think/public/js/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"
@@ -13,9 +14,20 @@
             crossorigin="anonymous"></script>
     <!-- include main css -->
     <link rel="stylesheet" type="text/css" href="/think/public/css/bootstrap.css"/>
-    <script src="/think/public/js/jquery-1.8.3.min.js"></script>
 
 </head>
+<script>
+    $(function () {
+        $('#sumb').on('click', function () {
+            window.location.href = "/think/public/index.php/index/login"
+        })
+    });
+    $("a[href='/think/public/index.php/index/beian']").on('mouseover', function () {
+        $(this).css('color', 'rgb(255,106,0)')
+    }).on('mouseout', function () {
+        $(this).css('color', 'rgb(255,255,255)')
+    })
+</script>
 <style type="text/css">
     body {
         background: url('https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/banner2.jpg');
@@ -27,6 +39,22 @@
 
     nav > ol > li > a {
         color: #FFFFFF;
+    }
+
+    #left {
+        color: #FFFFFF;
+        position: absolute;
+        top: 200px;
+        left: 300px;
+    }
+
+    #bottom {
+        font-weight: bold;
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 10px;
+        left: 500px;
+        opacity: 0.8;
     }
 </style>
 <body>
@@ -47,7 +75,7 @@
     </ol>
 </nav>
 <div class="banner">
-    
+
     <div class="login-aside">
         <div id="o-box-down">
             <div class="login-name">用户登录</div>
@@ -71,7 +99,7 @@
                     <p class="left">记住我</p>
                 </div>
                 <div class="clearfix"></div>
-                <div id="sumb" class="login-btn" onclick="window.location.href='/think/public/index.php/index/index'">
+                <div id="sumb" class="login-btn">
                     登录
                 </div>
             </form>
@@ -83,36 +111,5 @@
         </p>
     </div>
 </div>
-<style type="text/css">
-    #left {
-        color: #FFFFFF;
-        position: absolute;
-        top: 200px;
-        left: 300px;
-    }
-
-    #bottom {
-        font-weight: bold;
-        color: #FFFFFF;
-        position: absolute;
-        bottom: 10px;
-        left: 500px;
-        opacity: 0.8;
-    }
-</style>
-<script >
-    $(function () {
-        $('#login').on('click', function () {
-            window.location.href = "/think/public/index.php/index/login"
-        })
-
-        $('input, textarea').placeholder();
-    });
-    $("a[href='www.beian.miit.gov.cn']").on('mouseover',function () {
-        $(this).css('color','rgb(255,106,0)')
-    }).on('mouseout',function () {
-        $(this).css('color','rgb(255,255,255)')
-    })
-</script>
 </body>
 </html>
