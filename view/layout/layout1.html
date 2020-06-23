@@ -29,19 +29,18 @@
 
     </head>
     <body>
-        <script >
-            $(function () {
-                $('#login').on('click', function () {
-                    window.location.href = "/think/public/index.php/index/login"
-                })
-
-                $('input, textarea').placeholder();
-            });
-            $("a[href='/think/public/index.php/index/beian']").on('mouseover',function () {
-                $(this).css('color','rgb(255,106,0)')
-            }).on('mouseout',function () {
-                $(this).css('color','rgb(255,255,255)')
-            })
+        <script type="text/javascript">
+        	$(function() {
+        		$('#login').on('click', function() {
+        			window.location.href = "/think/public/index.php/index/login"
+        		})
+        		$('input, textarea').placeholder()
+        		$("a[href='/think/public/index.php/index/beian']").on('mouseover', function() {
+        			$(this).css('color', 'rgb(255,106,0)')
+        		}).on('mouseout', function() {
+        			$(this).css('color', 'rgb(153,153,153)')
+        		}).css('color', 'rgb(153,153,153)')
+        	})
         </script>
         <!--不包含新闻动态的头尾-->
         <div>

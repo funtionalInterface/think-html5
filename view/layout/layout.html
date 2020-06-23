@@ -1,367 +1,364 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <title>桂林电子科技大学</title>
-        <meta name="keywords" content="桂林电子科技大学">
-        <meta name="description" content="桂林电子科技大学">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link rel="shortcut icon" href="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>桂林电子科技大学</title>
+		<meta name="keywords" content="桂林电子科技大学">
+		<meta name="description" content="桂林电子科技大学">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="shortcut icon" href="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.ico">
 
-        <!-- include main css -->
-        <link rel="stylesheet" type="text/css" href="/think/public/css/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/bootstrap.css"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/jquery.mmenu.all.css"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/style.css"/>
-        <link href="/think/public/font-awesome-4.5.0/css/font-awesome.min.css" rel='stylesheet'
-              type='text/css' media="all"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/animate.css"/>
-        <script src="/think/public/js/jquery-3.3.1.min.js"></script>
-        <!--移动端导航-->
-        <script src="/think/public/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/think/public/js/public.js"></script>
-        <!--slick-->
-        <script src="/think/public/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/think/public/js/wow.js" type="text/javascript" charset="utf-8"></script>
-        <!--placeholder-->
-        <script src="/think/public/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- include main css -->
+		<link rel="stylesheet" type="text/css" href="/think/public/css/slick.css" />
+		<link rel="stylesheet" type="text/css" href="/think/public/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="/think/public/css/jquery.mmenu.all.css" />
+		<link rel="stylesheet" type="text/css" href="/think/public/css/style.css" />
+		<link href="/think/public/font-awesome-4.5.0/css/font-awesome.min.css" rel='stylesheet' type='text/css' media="all" />
+		<link rel="stylesheet" type="text/css" href="/think/public/css/animate.css" />
+		<script type="text/javascript" src="/think/public/js/jquery-3.3.1.min.js"></script>
+		<!--移动端导航-->
+		<script src="/think/public/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/think/public/js/public.js"></script>
+		<!--slick-->
+		<script src="/think/public/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/think/public/js/wow.js" type="text/javascript" charset="utf-8"></script>
+		<!--placeholder-->
+		<script src="/think/public/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
 
-    </head>
-    <body>
-        <script >
-            $(function () {
-                $('#login').on('click', function () {
-                    window.location.href = "/think/public/index.php/index/login"
-                })
+	</head>
+	<body>
+		<script type="text/javascript">
+			$(function() {
+				$('#login').on('click', function() {
+					window.location.href = "/think/public/index.php/index/login"
+				})
+				$('input, textarea').placeholder()
+				$("a[href='/think/public/index.php/index/beian']").on('mouseover', function() {
+					$(this).css('color', 'rgb(255,106,0)')
+				}).on('mouseout', function() {
+					$(this).css('color', 'rgb(153,153,153)')
+				}).css('color', 'rgb(153,153,153)')
+			})
+		</script>
+		<div>
+			<!--header-->
+			<header class="header_zi">
+				<div class="container">
+					<div class="logo">
+						<a href="/think/public/index.php/index/index">
+							<img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.png" height="56" alt="" />
+						</a>
 
-                $('input, textarea').placeholder();
-            });
-            $("a[href='/think/public/index.php/index/beian']").on('mouseover',function () {
-                $(this).css('color','rgb(255,106,0)')
-            }).on('mouseout',function () {
-                $(this).css('color','rgb(255,255,255)')
-            })
-        </script>
-        <div>
-            <!--header-->
-            <header class="header_zi">
-                <div class="container">
-                    <div class="logo">
-                        <a href="/think/public/index.php/index/index">
-                            <img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.png"
-                                 height="56" alt=""/>
-                        </a>
+					</div>
+					<a href="#mmenu" class="phone-nav">
+						<i class="fa fa-list"></i>
+					</a>
 
-                    </div>
-                    <a href="#mmenu" class="phone-nav">
-                        <i class="fa fa-list"></i>
-                    </a>
+					<div class="logo_right">
+						<button id="login" type="button" class="btn btn-success" style="margin-left: 10px">
+							登录
+						</button>
+						<nav class="nav">
+							<ul>
 
-                    <div class="logo_right">
-                        <button id="login" type="button" class="btn btn-success" style="margin-left: 10px">
-                            登录
-                        </button>
-                        <nav class="nav">
-                            <ul>
+								<li>
+									{if condition="session('name')=='index'"}
+									<a href="/think/public/index.php/index/index" class="active">首页</a>
+									{else /}
+									<a href="/think/public/index.php/index/index">首页</a>
+									{/if}
+								</li>
+								<li>
+									{if condition="session('name')=='scenicOverview'"}
+									<a href="/think/public/index.php/index/scenicOverview" class="active">校园概况</a>
+									{else /}
+									<a href="/think/public/index.php/index/scenicOverview">校园概况</a>
+									{/if}
+								</li>
+								<li>
+									{if condition="session('name')=='courtTravel'"}
+									<a href="/think/public/index.php/index/courtTravel" class="active">校园生活</a>
+									{else /}
+									<a href="/think/public/index.php/index/courtTravel">校园生活</a>
+									{/if}
+									<ul>
+										<li>
+											<a href="/think/public/index.php/index/courtTravel">体育健康</a>
+										</li>
+										<li>
+											<a href="/think/public/index.php/index/courtTravel">讲座演出</a>
+										</li>
+										<li>
+											<a href="/think/public/index.php/index/courtTravel">社团活动</a>
+										</li>
+										<li>
+											<a href="/think/public/index.php/index/courtTravel">艺术生活</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									{if condition="session('name')=='comfortable'"}
+									<a href="/think/public/index.php/index/comfortable" class="active">教育教学</a>
+									{else /}
+									<a href="/think/public/index.php/index/comfortable">教育教学</a>
+									{/if}
 
-                                <li>
-                                    {if condition="session('name')=='index'"}
-                                    <a href="/think/public/index.php/index/index" class="active">首页</a>
-                                    {else /}
-                                    <a href="/think/public/index.php/index/index">首页</a>
-                                    {/if}
-                                </li>
-                                <li>
-                                    {if condition="session('name')=='scenicOverview'"}
-                                    <a href="/think/public/index.php/index/scenicOverview" class="active">校园概况</a>
-                                    {else /}
-                                    <a href="/think/public/index.php/index/scenicOverview">校园概况</a>
-                                    {/if}
-                                </li>
-                                <li>
-                                    {if condition="session('name')=='courtTravel'"}
-                                    <a href="/think/public/index.php/index/courtTravel" class="active">校园生活</a>
-                                    {else /}
-                                    <a href="/think/public/index.php/index/courtTravel">校园生活</a>
-                                    {/if}
-                                    <ul>
-                                        <li>
-                                            <a href="/think/public/index.php/index/courtTravel">体育健康</a>
-                                        </li>
-                                        <li>
-                                            <a href="/think/public/index.php/index/courtTravel">讲座演出</a>
-                                        </li>
-                                        <li>
-                                            <a href="/think/public/index.php/index/courtTravel">社团活动</a>
-                                        </li>
-                                        <li>
-                                            <a href="/think/public/index.php/index/courtTravel">艺术生活</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    {if condition="session('name')=='comfortable'"}
-                                    <a href="/think/public/index.php/index/comfortable" class="active">教育教学</a>
-                                    {else /}
-                                    <a href="/think/public/index.php/index/comfortable">教育教学</a>
-                                    {/if}
+									<ul>
+										<li>
+											<a href="/think/public/index.php/index/comfortable">师资队伍</a>
+										<li>
+											<a href="/think/public/index.php/index/comfortable">教学网</a>
+										<li>
+											<a href="/think/public/index.php/index/comfortable">课表查询</a>
+									</ul>
 
-                                    <ul>
-                                        <li>
-                                            <a href="/think/public/index.php/index/comfortable">师资队伍</a>
-                                        <li>
-                                            <a href="/think/public/index.php/index/comfortable">教学网</a>
-                                        <li>
-                                            <a href="/think/public/index.php/index/comfortable">课表查询</a>
-                                    </ul>
+								</li>
+								<li>
+									{if condition="session('name')=='news'"}
+									<a href="/think/public/index.php/index/news" class="active">新闻动态</a>
+									{else /}
+									<a href="/think/public/index.php/index/news">新闻动态</a>
+									{/if}
+									<ul>
+										<li>
+											<a href="/think/public/index.php/index/news">校园新闻</a>
+										</li>
+										<li>
+											<a href="/think/public/index.php/index/news">专业新闻</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									{if condition="session('name')=='feedback'"}
+									<a href="/think/public/index.php/index/feedback" class="active">留言中心</a>
+									{else /}
+									<a href="/think/public/index.php/index/feedback">留言中心</a>
+									{/if}
+								</li>
+								<li>
+									{if condition="session('name')=='contact'"}
+									<a href="/think/public/index.php/index/contact" class="active">联系我们</a>
+									{else /}
+									<a href="/think/public/index.php/index/contact">联系我们</a>
+									{/if}
+								</li>
+							</ul>
+						</nav>
 
-                                </li>
-                                <li>
-                                    {if condition="session('name')=='news'"}
-                                    <a href="/think/public/index.php/index/news" class="active">新闻动态</a>
-                                    {else /}
-                                    <a href="/think/public/index.php/index/news">新闻动态</a>
-                                    {/if}
-                                    <ul>
-                                        <li>
-                                            <a href="/think/public/index.php/index/news">校园新闻</a>
-                                        </li>
-                                        <li>
-                                            <a href="/think/public/index.php/index/news">专业新闻</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    {if condition="session('name')=='feedback'"}
-                                    <a href="/think/public/index.php/index/feedback" class="active">留言中心</a>
-                                    {else /}
-                                    <a href="/think/public/index.php/index/feedback">留言中心</a>
-                                    {/if}
-                                </li>
-                                <li>
-                                    {if condition="session('name')=='contact'"}
-                                    <a href="/think/public/index.php/index/contact" class="active">联系我们</a>
-                                    {else /}
-                                    <a href="/think/public/index.php/index/contact">联系我们</a>
-                                    {/if}
-                                </li>
-                            </ul>
-                        </nav>
+					</div>
 
-                    </div>
+				</div>
+			</header>
 
-                </div>
-            </header>
-
-            {__CONTENT__}
+			{__CONTENT__}
 
 
-            <div class="home_news">
-                <div class="news_con">
-                    <div class="top_tit">
-                        <span class="span1">
-                            <a href="/think/public/index.php/index/news">新闻动态</a>
-                        </span>
-                        <br/>
-                        <span class="span2">NEWS</span>
-                    </div>
-                    <ul>
-                        <li class="clearfix">
-                            <div class="news_left">
-                                <a href="/think/public/index.php/index/news">北海校区学子获评北海市优秀红十字志愿者</a>
-                                <p>
-                                    近日，北海市红十字会评选2018-2019年度北海市优秀红十字志愿者结果出炉，北海校区海风志愿者服务队红十字分队干部陈雨翠同学获得“北海市优秀红十字志愿者”荣誉称号。
-                                    据悉，北海校区积极组织和参与志愿者活动，在师生中弘扬“人道、博爱、奉献”的红十字精神和志愿服务精神。校区2019年组织了三场无偿献血活动，其中11月份的献血活动中，920名师生总计献血量305150毫升，刷新北海市团体单位单次献血的新纪录。
-                                    （供稿：黄玉凤 审稿：林佩静）
-                                </p>
-                            </div>
-                            <div class="news_right">
-                                <span>06.18</span>
-                                <time>2020</time>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="news_left">
-                                <a href="/think/public/index.php/index/news">北海校区召开纪检监察干部会议</a>
-                                <p>
-                                    6月16日上午，北海校区在2506会议室组织召开纪检监察干部会议。北海校区纪委书记杨春梅，校区纪委委员，校区各党总支、直属党支部纪检委员，机关各党支部纪检委员参加了会议。会议由杨春梅同志主持。
-                                    会上，杨书记传达了习近平总书记在十九届中央纪委四次全会上的重要讲话精神、十九届中央纪委四次全会精神和自治区纪委十一届六次全会精神，以及学校2020年纪检监察工作要点的主要内容。
-                                    杨书记重点结合北海校区2020年度纪检监察工作计划，从守住初心使命做好“两个维护”、全力保障校区新冠肺炎疫情防控、加强校区廉政风险防控常态化建设、加强校区制度执行监督、强化廉洁文化宣传教育、
-                                    持之以恒开展作风建设、做好信访核查和正风肃纪工作、加强校区纪检监察干部队伍建设等八个方面，对校区2020年的纪检监察工作进行了详细的解读，并对校区纪检监察工作的开展提出了具体明确的要求。杨书记强调，
-                                    校区纪检监察干部要加强政治和业务学习，以身作则，加强对所在单位、部门业务的日常监督，将业务部门的自我监督工作落细落实，切实履行好纪检监察干部的职责，共建风清气正的廉洁校园。
-                                    （供稿：蓝庆娜 审稿：林佩静）
-                                </p>
-                            </div>
-                            <div class="news_right">
-                                <span>06.16</span>
-                                <time>2020</time>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="news_left">
-                                <a href="/think/public/index.php/index/news">北海校区开展2020年西部计划志愿者选拔工作</a>
-                                <p>
+			<div class="home_news">
+				<div class="news_con">
+					<div class="top_tit">
+						<span class="span1">
+							<a href="/think/public/index.php/index/news">新闻动态</a>
+						</span>
+						<br />
+						<span class="span2">NEWS</span>
+					</div>
+					<ul>
+						<li class="clearfix">
+							<div class="news_left">
+								<a href="/think/public/index.php/index/news">北海校区学子获评北海市优秀红十字志愿者</a>
+								<p>
+									近日，北海市红十字会评选2018-2019年度北海市优秀红十字志愿者结果出炉，北海校区海风志愿者服务队红十字分队干部陈雨翠同学获得“北海市优秀红十字志愿者”荣誉称号。
+									据悉，北海校区积极组织和参与志愿者活动，在师生中弘扬“人道、博爱、奉献”的红十字精神和志愿服务精神。校区2019年组织了三场无偿献血活动，其中11月份的献血活动中，920名师生总计献血量305150毫升，刷新北海市团体单位单次献血的新纪录。
+									（供稿：黄玉凤 审稿：林佩静）
+								</p>
+							</div>
+							<div class="news_right">
+								<span>06.18</span>
+								<time>2020</time>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="news_left">
+								<a href="/think/public/index.php/index/news">北海校区召开纪检监察干部会议</a>
+								<p>
+									6月16日上午，北海校区在2506会议室组织召开纪检监察干部会议。北海校区纪委书记杨春梅，校区纪委委员，校区各党总支、直属党支部纪检委员，机关各党支部纪检委员参加了会议。会议由杨春梅同志主持。
+									会上，杨书记传达了习近平总书记在十九届中央纪委四次全会上的重要讲话精神、十九届中央纪委四次全会精神和自治区纪委十一届六次全会精神，以及学校2020年纪检监察工作要点的主要内容。
+									杨书记重点结合北海校区2020年度纪检监察工作计划，从守住初心使命做好“两个维护”、全力保障校区新冠肺炎疫情防控、加强校区廉政风险防控常态化建设、加强校区制度执行监督、强化廉洁文化宣传教育、
+									持之以恒开展作风建设、做好信访核查和正风肃纪工作、加强校区纪检监察干部队伍建设等八个方面，对校区2020年的纪检监察工作进行了详细的解读，并对校区纪检监察工作的开展提出了具体明确的要求。杨书记强调，
+									校区纪检监察干部要加强政治和业务学习，以身作则，加强对所在单位、部门业务的日常监督，将业务部门的自我监督工作落细落实，切实履行好纪检监察干部的职责，共建风清气正的廉洁校园。
+									（供稿：蓝庆娜 审稿：林佩静）
+								</p>
+							</div>
+							<div class="news_right">
+								<span>06.16</span>
+								<time>2020</time>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="news_left">
+								<a href="/think/public/index.php/index/news">北海校区开展2020年西部计划志愿者选拔工作</a>
+								<p>
 
-                                    为做好2020年西部计划志愿者的招募工作，6月15日，北海校区在综合楼307办公室举行西部计划网络面试，校区团委书记莫绍媛、各学院教师代表担任评委。
-                                    此次西部计划志愿者的招募活动经过了个人网上申报、学院考察推荐、校区团委审核、心理测试等环节，最终进入面试环节。面试共分个人陈述、评委提问，综合考察等环节。
-                                    面试过程中评委就候选人的综合素质、家庭情况和对西部计划的认识等方面对学生进行全面考察。同学们也从自己对西部计划的认识及报名动机等多个方面表达了自己的想法，
-                                    都希望能够通过西部计划为祖国西部的发展贡献自己的一份力量。此次面试充分体现了北海校区学子积极响应国家号召、投身西部建设的热情。
-                                    据悉，北海校区共有153名本科生报名2020年西部计划志愿者，本次共有12名同学进入面试，将推选出2名同学参与西部计划。期待他们以青春梦想和实际行动，为实现中华民族伟大复兴的中国梦而做出贡献。
-                                    （供稿：黄玉凤 审稿：林佩静）
-                                </p>
-                            </div>
-                            <div class="news_right">
-                                <span>06.15</span>
-                                <time>2020</time>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="news_left">
-                                <a href="/think/public/index.php/index/news">北海校区召开研究生党员座谈会</a>
-                                <p>
-                                    6月12日上午，北海校区在桂林金鸡岭校区7603会议室召开全体研究生党员座谈会。学校校长助理、北海校区校长、校区党委副书记陈名松出席了座谈会。北海校区常务副校长、党委委员王鑫，北海校区副校长、党委委员于
-                                    新华等校区领导以及北海校区研究生工作相关单位、部门负责人参加了座谈。座谈会由于新华同志主持。
-                                    座谈会在民主、祥和、温馨的氛围中展开。研究生党员围绕党支部建设、课程建设、研究生培养和管理等方面的工作充分发表了意见和建议。与会的相关单位负责人针对同学们提出的问题进行了解答并给出了相关解决方案。
-                                    陈名松校长代表校区对同学们进行了亲切问候和美好祝愿，就生活和学习上的各项具体问题与同学们进行了深入交流，要求校区相关部门将同学们反映的问题逐项梳理、分析，尽快研讨、汇报，制定出具体方案予以解决。
-                                    （供稿：覃琴 审稿：林佩静）
-                                </p>
-                            </div>
-                            <div class="news_right">
-                                <span>06.15</span>
-                                <time>2020</time>
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="/think/public/index.php/index/news" class="more">MORE</a>
-                </div>
-            </div>
-            <!--footer  start-->
-            <footer class="footer">
-                <div class="footer_con">
-                    <div class="con">
-                        <div class="nei">
-                            <div class="">
-                                <ul class="di_nav clearfix">
-                                    <li>
-                                        <a href="/think/public/index.php/index/scenicOverview">校园概况</a>
-                                    </li>
-                                    <li>
-                                        <a href="/think/public/index.php/index/courtTravel">校园生活</a>
-                                    </li>
-                                    <li>
-                                        <a href="/think/public/index.php/index/comfortable">教育教学</a>
-                                    </li>
-                                    <li>
-                                        <a href="/think/public/index.php/index/news">新闻动态</a>
-                                    </li>
-                                    <li>
-                                        <a href="/think/public/index.php/index/feedback">留言中心</a>
-                                    </li>
-                                    <li>
-                                        <a href="/think/public/index.php/index/contact">联系我们</a>
-                                    </li>
-                                </ul>
-                                <div class="links">友情链接
-                                    <ul>
-                                        <li>
-                                            <a href="">百度文化</a>
-                                        </li>
-                                        <li>
-                                            <a href="">新浪微博</a>
-                                        </li>
-                                        <li>
-                                            <a href="">百度知道</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="lian">
-                                地址：广西北海银海区南珠大道9号
-                                <br/>
-                                <a href="/think/public/index.php/index/map">网站导航</a>
-                                <br/>
-                            </div>
+									为做好2020年西部计划志愿者的招募工作，6月15日，北海校区在综合楼307办公室举行西部计划网络面试，校区团委书记莫绍媛、各学院教师代表担任评委。
+									此次西部计划志愿者的招募活动经过了个人网上申报、学院考察推荐、校区团委审核、心理测试等环节，最终进入面试环节。面试共分个人陈述、评委提问，综合考察等环节。
+									面试过程中评委就候选人的综合素质、家庭情况和对西部计划的认识等方面对学生进行全面考察。同学们也从自己对西部计划的认识及报名动机等多个方面表达了自己的想法，
+									都希望能够通过西部计划为祖国西部的发展贡献自己的一份力量。此次面试充分体现了北海校区学子积极响应国家号召、投身西部建设的热情。
+									据悉，北海校区共有153名本科生报名2020年西部计划志愿者，本次共有12名同学进入面试，将推选出2名同学参与西部计划。期待他们以青春梦想和实际行动，为实现中华民族伟大复兴的中国梦而做出贡献。
+									（供稿：黄玉凤 审稿：林佩静）
+								</p>
+							</div>
+							<div class="news_right">
+								<span>06.15</span>
+								<time>2020</time>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="news_left">
+								<a href="/think/public/index.php/index/news">北海校区召开研究生党员座谈会</a>
+								<p>
+									6月12日上午，北海校区在桂林金鸡岭校区7603会议室召开全体研究生党员座谈会。学校校长助理、北海校区校长、校区党委副书记陈名松出席了座谈会。北海校区常务副校长、党委委员王鑫，北海校区副校长、党委委员于
+									新华等校区领导以及北海校区研究生工作相关单位、部门负责人参加了座谈。座谈会由于新华同志主持。
+									座谈会在民主、祥和、温馨的氛围中展开。研究生党员围绕党支部建设、课程建设、研究生培养和管理等方面的工作充分发表了意见和建议。与会的相关单位负责人针对同学们提出的问题进行了解答并给出了相关解决方案。
+									陈名松校长代表校区对同学们进行了亲切问候和美好祝愿，就生活和学习上的各项具体问题与同学们进行了深入交流，要求校区相关部门将同学们反映的问题逐项梳理、分析，尽快研讨、汇报，制定出具体方案予以解决。
+									（供稿：覃琴 审稿：林佩静）
+								</p>
+							</div>
+							<div class="news_right">
+								<span>06.15</span>
+								<time>2020</time>
+							</div>
+						</li>
+					</ul>
+					<a href="/think/public/index.php/index/news" class="more">MORE</a>
+				</div>
+			</div>
+			<!--footer  start-->
+			<footer class="footer">
+				<div class="footer_con">
+					<div class="con">
+						<div class="nei">
+							<div class="">
+								<ul class="di_nav clearfix">
+									<li>
+										<a href="/think/public/index.php/index/scenicOverview">校园概况</a>
+									</li>
+									<li>
+										<a href="/think/public/index.php/index/courtTravel">校园生活</a>
+									</li>
+									<li>
+										<a href="/think/public/index.php/index/comfortable">教育教学</a>
+									</li>
+									<li>
+										<a href="/think/public/index.php/index/news">新闻动态</a>
+									</li>
+									<li>
+										<a href="/think/public/index.php/index/feedback">留言中心</a>
+									</li>
+									<li>
+										<a href="/think/public/index.php/index/contact">联系我们</a>
+									</li>
+								</ul>
+								<div class="links">友情链接
+									<ul>
+										<li>
+											<a href="">百度文化</a>
+										</li>
+										<li>
+											<a href="">新浪微博</a>
+										</li>
+										<li>
+											<a href="">百度知道</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div class="lian">
+								地址：广西北海银海区南珠大道9号
+								<br />
+								<a href="/think/public/index.php/index/map">网站导航</a>
+								<br />
+							</div>
 
-                        </div>
-                    </div>
+						</div>
+					</div>
 
-                </div>
-                <div class="copy">
-                    <p>© 2020 haogege.icu 版权所有&nbsp&nbsp&nbsp
-                        <a href="/think/public/index.php/index/beian">桂ICP备20004258号</a>
-                    </p>
+				</div>
+				<div class="copy">
+					<p>© 2020 haogege.icu 版权所有&nbsp&nbsp&nbsp
+						<a href="/think/public/index.php/index/beian">桂ICP备20004258号</a>
+					</p>
 
-                </div>
-            </footer>
-            <!--footer  end-->
+				</div>
+			</footer>
+			<!--footer  end-->
 
-        </div>
+		</div>
 
-        <!--移动端  Mmenu-->
-        <nav id="mmenu">
+		<!--移动端  Mmenu-->
+		<nav id="mmenu">
 
-            <ul>
+			<ul>
 
-                <li>
-                    <a href="/think/public/index.php/index/index" class="active">首页</a>
-                </li>
-                <li>
-                    <a href="/think/public/index.php/index/scenicOverview">校园概况</a>
-                </li>
-                <li>
-                    <a href="/think/public/index.php/index/courtTravel">校园生活</a>
-                    <ul>
-                        <li>
-                            <a href="/think/public/index.php/index/courtTravel">体育健康</a>
-                        </li>
-                        <li>
-                            <a href="/think/public/index.php/index/courtTravel">讲座演出</a>
-                        </li>
-                        <li>
-                            <a href="/think/public/index.php/index/courtTravel">社团活动</a>
-                        </li>
-                        <li>
-                            <a href="/think/public/index.php/index/courtTravel">艺术生活</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/think/public/index.php/index/comfortable">教育教学</a>
-                    <ul>
-                        <li>
-                            <a href="/think/public/index.php/index/comfortable">师资队伍</a>
-                        </li>
-                        <li>
-                            <a href="/think/public/index.php/index/comfortable">教学网</a>
-                        </li>
-                        <li>
-                            <a href="/think/public/index.php/index/comfortable">课表查询</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/think/public/index.php/index/news">新闻动态</a>
-                    <ul>
-                        <li>
-                            <a href="/think/public/index.php/index/news">校园新闻</a>
-                        </li>
-                        <li>
-                            <a href="/think/public/index.php/index/news">专业新闻</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/think/public/index.php/index/feedback">留言中心</a>
-                </li>
-                <li>
-                    <a href="/think/public/index.php/index/contact">联系我们</a>
-                </li>
+				<li>
+					<a href="/think/public/index.php/index/index" class="active">首页</a>
+				</li>
+				<li>
+					<a href="/think/public/index.php/index/scenicOverview">校园概况</a>
+				</li>
+				<li>
+					<a href="/think/public/index.php/index/courtTravel">校园生活</a>
+					<ul>
+						<li>
+							<a href="/think/public/index.php/index/courtTravel">体育健康</a>
+						</li>
+						<li>
+							<a href="/think/public/index.php/index/courtTravel">讲座演出</a>
+						</li>
+						<li>
+							<a href="/think/public/index.php/index/courtTravel">社团活动</a>
+						</li>
+						<li>
+							<a href="/think/public/index.php/index/courtTravel">艺术生活</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/think/public/index.php/index/comfortable">教育教学</a>
+					<ul>
+						<li>
+							<a href="/think/public/index.php/index/comfortable">师资队伍</a>
+						</li>
+						<li>
+							<a href="/think/public/index.php/index/comfortable">教学网</a>
+						</li>
+						<li>
+							<a href="/think/public/index.php/index/comfortable">课表查询</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/think/public/index.php/index/news">新闻动态</a>
+					<ul>
+						<li>
+							<a href="/think/public/index.php/index/news">校园新闻</a>
+						</li>
+						<li>
+							<a href="/think/public/index.php/index/news">专业新闻</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/think/public/index.php/index/feedback">留言中心</a>
+				</li>
+				<li>
+					<a href="/think/public/index.php/index/contact">联系我们</a>
+				</li>
 
-            </ul>
-        </nav>
-        </div>
+			</ul>
+		</nav>
+		</div>
 
-    </body>
+	</body>
 </html>
