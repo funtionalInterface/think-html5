@@ -18,7 +18,26 @@
 </head>
 <body>
 <!--视频切换-->
+<<<<<<< HEAD
 <script>
+=======
+<script >
+    $(function () {
+        // 切换视频
+        $("ul[id='list'] li a").on('click', function () {
+            var context = $(this).attr('context')
+            $("div[class='box'] video").attr('src', context)
+        })
+
+        $('input, textarea').placeholder();
+        // 版权信息
+        $("a[href='/think/public/index.php/index/beian']").on('mouseover', function () {
+            $(this).css('color', 'rgb(255,106,0)')
+        }).on('mouseout', function () {
+            $(this).css('color', 'rgb(255,255,255)')
+        })
+    });
+>>>>>>> ec37126a6d5e2dbc2f65e9a09ce91cb01dd95d1c
 
 </script>
 <!-----banner---->
@@ -67,6 +86,7 @@
             <a href="/think/public/index.php/index/beian">桂ICP备20004258号</a>
         </p>
     </div>
+<<<<<<< HEAD
     <script type="javascript">
         $(function () {
             // 切换视频
@@ -84,6 +104,9 @@
         });
 
     </script>
+=======
+
+>>>>>>> ec37126a6d5e2dbc2f65e9a09ce91cb01dd95d1c
 </div>
 
 </body>

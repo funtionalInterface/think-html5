@@ -29,6 +29,20 @@
 
     </head>
     <body>
+        <script >
+            $(function () {
+                $('#login').on('click', function () {
+                    window.location.href = "/think/public/index.php/index/login"
+                })
+
+                $('input, textarea').placeholder();
+            });
+            $("a[href='/think/public/index.php/index/beian']").on('mouseover',function () {
+                $(this).css('color','rgb(255,106,0)')
+            }).on('mouseout',function () {
+                $(this).css('color','rgb(255,255,255)')
+            })
+        </script>
         <!--不包含新闻动态的头尾-->
         <div>
             <!--header-->
@@ -264,19 +278,6 @@
             </ul>
         </nav>
         </div>
-        <script >
-            $(function () {
-                $('#login').on('click', function () {
-                    window.location.href = "/think/public/index.php/index/login"
-                })
 
-                $('input, textarea').placeholder();
-            });
-            $("a[href='www.beian.miit.gov.cn']").on('mouseover',function () {
-                $(this).css('color','rgb(255,106,0)')
-            }).on('mouseout',function () {
-                $(this).css('color','rgb(255,255,255)')
-            })
-        </script>
     </body>
 </html>

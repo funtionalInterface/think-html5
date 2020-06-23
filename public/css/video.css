@@ -1,9 +1,12 @@
 body {
     background: url('https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/banner2.jpg');
 }
+
 nav > ol > li > a {
+
     color: #FFFFFF;
 }
+
 .box {
     width: 1200px;
     height: 400px;
@@ -12,12 +15,14 @@ nav > ol > li > a {
     background: #262625;
     position: absolute;
 }
+
 video {
     width: 800px;
     position: absolute;
     /*  left: 20px;
       top: 30px;*/
 }
+
 #list {
     width: 350px;
     height: 340px;
@@ -26,6 +31,7 @@ video {
     top: 30px;
     background: #171717;
 }
+
 #list li {
     width: 350px;
     height: 114px;
@@ -47,6 +53,7 @@ li p {
 p span {
     font-size: 12px;
 }
+
 #left {
     color: #FFFFFF;
     position: absolute;
