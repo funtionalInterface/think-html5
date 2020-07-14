@@ -10,32 +10,32 @@
         <link rel="shortcut icon" href="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.ico">
 
         <!-- include main css -->
-        <link rel="stylesheet" type="text/css" href="/think/public/css/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/bootstrap.css"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/jquery.mmenu.all.css"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/style.css"/>
-        <link href="/think/public/font-awesome-4.5.0/css/font-awesome.min.css" rel='stylesheet'
+        <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/jquery.mmenu.all.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+        <link href="/font-awesome-4.5.0/css/font-awesome.min.css" rel='stylesheet'
               type='text/css' media="all"/>
-        <link rel="stylesheet" type="text/css" href="/think/public/css/animate.css"/>
-        <script src="/think/public/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/animate.css"/>
+        <script src="/js/jquery-3.3.1.min.js"></script>
         <!--移动端导航-->
-        <script src="/think/public/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/think/public/js/public.js"></script>
+        <script src="/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/public.js"></script>
         <!--slick-->
-        <script src="/think/public/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/think/public/js/wow.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/wow.js" type="text/javascript" charset="utf-8"></script>
         <!--placeholder-->
-        <script src="/think/public/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
 
     </head>
     <body>
         <script type="text/javascript">
         	$(function() {
         		$('#login').on('click', function() {
-        			window.location.href = "/think/public/index.php/index/login"
+        			window.location.href = "/index.php/index/login"
         		})
         		$('input, textarea').placeholder()
-        		$("a[href='/think/public/index.php/index/beian']").on('mouseover', function() {
+        		$("a[href='/index.php/index/beian']").on('mouseover', function() {
         			$(this).css('color', 'rgb(255,106,0)')
         		}).on('mouseout', function() {
         			$(this).css('color', 'rgb(153,153,153)')
@@ -48,7 +48,7 @@
             <header class="header_zi">
                 <div class="container">
                     <div class="logo">
-                        <a href="/think/public/index.php/index/index">
+                        <a href="/index.php/index/index">
                             <img src="https://phpserver.oss-cn-beijing.aliyuncs.com/guet_web/images/favicon.png"
                                  height="56" alt=""/>
                         </a>
@@ -64,83 +64,83 @@
                             <ul>
                                 <li>
                                     {if condition="session('name')=='index'"}
-                                    <a href="/think/public/index.php/index/index" class="active">首页</a>
+                                    <a href="/index.php/index/index" class="active">首页</a>
                                     {else /}
-                                    <a href="/think/public/index.php/index/index">首页</a>
+                                    <a href="/index.php/index/index">首页</a>
                                     {/if}
                                 </li>
                                 <li>
                                     {if condition="session('name')=='scenicOverview'"}
-                                    <a href="/think/public/index.php/index/scenicOverview" class="active">校园概况</a>
+                                    <a href="/index.php/index/scenicOverview" class="active">校园概况</a>
                                     {else /}
-                                    <a href="/think/public/index.php/index/scenicOverview">校园概况</a>
+                                    <a href="/index.php/index/scenicOverview">校园概况</a>
                                     {/if}
                                 </li>
                                 <li>
                                     {if condition="session('name')=='courtTravel'"}
-                                    <a href="/think/public/index.php/index/courtTravel" class="active">校园生活</a>
+                                    <a href="/index.php/index/courtTravel" class="active">校园生活</a>
                                     {else /}
-                                    <a href="/think/public/index.php/index/courtTravel">校园生活</a>
+                                    <a href="/index.php/index/courtTravel">校园生活</a>
                                     {/if}
                                     <ul>
                                         <li>
-                                            <a href="/think/public/index.php/index/courtTravel">体育健康</a>
+                                            <a href="/index.php/index/courtTravel">体育健康</a>
                                         </li>
                                         <li>
-                                            <a href="/think/public/index.php/index/courtTravel">讲座演出</a>
+                                            <a href="/index.php/index/courtTravel">讲座演出</a>
                                         </li>
                                         <li>
-                                            <a href="/think/public/index.php/index/courtTravel">社团活动</a>
+                                            <a href="/index.php/index/courtTravel">社团活动</a>
                                         </li>
                                         <li>
-                                            <a href="/think/public/index.php/index/courtTravel">艺术生活</a>
+                                            <a href="/index.php/index/courtTravel">艺术生活</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
                                     {if condition="session('name')=='comfortable'"}
-                                    <a href="/think/public/index.php/index/comfortable" class="active">教育教学</a>
+                                    <a href="/index.php/index/comfortable" class="active">教育教学</a>
                                     {else /}
-                                    <a href="/think/public/index.php/index/comfortable">教育教学</a>
+                                    <a href="/index.php/index/comfortable">教育教学</a>
                                     {/if}
 
                                     <ul>
                                         <li>
-                                            <a href="/think/public/index.php/index/comfortable">师资队伍</a>
+                                            <a href="/index.php/index/comfortable">师资队伍</a>
                                         <li>
-                                            <a href="/think/public/index.php/index/comfortable">教学网</a>
+                                            <a href="/index.php/index/comfortable">教学网</a>
                                         <li>
-                                            <a href="/think/public/index.php/index/comfortable">课表查询</a>
+                                            <a href="/index.php/index/comfortable">课表查询</a>
                                     </ul>
 
                                 </li>
                                 <li>
                                     {if condition="session('name')=='news'"}
-                                    <a href="/think/public/index.php/index/news" class="active">新闻动态</a>
+                                    <a href="/index.php/index/news" class="active">新闻动态</a>
                                     {else /}
-                                    <a href="/think/public/index.php/index/news">新闻动态</a>
+                                    <a href="/index.php/index/news">新闻动态</a>
                                     {/if}
                                     <ul>
                                         <li>
-                                            <a href="/think/public/index.php/index/news">校园新闻</a>
+                                            <a href="/index.php/index/news">校园新闻</a>
                                         </li>
                                         <li>
-                                            <a href="/think/public/index.php/index/news">专业新闻</a>
+                                            <a href="/index.php/index/news">专业新闻</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
                                     {if condition="session('name')=='feedback'"}
-                                    <a href="/think/public/index.php/index/feedback" class="active">留言中心</a>
+                                    <a href="/index.php/index/feedback" class="active">留言中心</a>
                                     {else /}
-                                    <a href="/think/public/index.php/index/feedback">留言中心</a>
+                                    <a href="/index.php/index/feedback">留言中心</a>
                                     {/if}
                                 </li>
                                 <li>
                                     {if condition="session('name')=='contact'"}
-                                    <a href="/think/public/index.php/index/contact" class="active">联系我们</a>
+                                    <a href="/index.php/index/contact" class="active">联系我们</a>
                                     {else /}
-                                    <a href="/think/public/index.php/index/contact">联系我们</a>
+                                    <a href="/index.php/index/contact">联系我们</a>
                                     {/if}
                                 </li>
                             </ul>
@@ -162,22 +162,22 @@
                             <div class="">
                                 <ul class="di_nav clearfix">
                                     <li>
-                                        <a href="/think/public/index.php/index/scenicOverview">校园概况</a>
+                                        <a href="/index.php/index/scenicOverview">校园概况</a>
                                     </li>
                                     <li>
-                                        <a href="/think/public/index.php/index/courtTravel">校园生活</a>
+                                        <a href="/index.php/index/courtTravel">校园生活</a>
                                     </li>
                                     <li>
-                                        <a href="/think/public/index.php/index/comfortable">教育教学</a>
+                                        <a href="/index.php/index/comfortable">教育教学</a>
                                     </li>
                                     <li>
-                                        <a href="/think/public/index.php/index/news">新闻动态</a>
+                                        <a href="/index.php/index/news">新闻动态</a>
                                     </li>
                                     <li>
-                                        <a href="/think/public/index.php/index/feedback">留言中心</a>
+                                        <a href="/index.php/index/feedback">留言中心</a>
                                     </li>
                                     <li>
-                                        <a href="/think/public/index.php/index/contact">联系我们</a>
+                                        <a href="/index.php/index/contact">联系我们</a>
                                     </li>
                                 </ul>
                                 <div class="links">友情链接
@@ -198,7 +198,7 @@
                             <div class="lian">
                                 地址：广西北海银海区南珠大道9号
                                 <br/>
-                                <a href="/think/public/index.php/index/map">网站导航</a>
+                                <a href="/index.php/index/map">网站导航</a>
                                 <br/>
                             </div>
 
@@ -207,7 +207,7 @@
 
                 </div>
                 <div class="copy"><p>© 2020 haogege.icu 版权所有&nbsp&nbsp&nbsp
-                    <a href="/think/public/index.php/index/beian">桂ICP备20004258号</a>
+                    <a href="/index.php/index/beian">桂ICP备20004258号</a>
                 </p></div>
             </footer>
             <!--footer  end-->
@@ -220,58 +220,58 @@
             <ul>
 
                 <li>
-                    <a href="/think/public/index.php/index/index" class="active">首页</a>
+                    <a href="/index.php/index/index" class="active">首页</a>
                 </li>
                 <li>
-                    <a href="/think/public/index.php/index/scenicOverview">校园概况</a>
+                    <a href="/index.php/index/scenicOverview">校园概况</a>
                 </li>
                 <li>
-                    <a href="/think/public/index.php/index/courtTravel">校园生活</a>
+                    <a href="/index.php/index/courtTravel">校园生活</a>
                     <ul>
                         <li>
-                            <a href="/think/public/index.php/index/courtTravel">体育健康</a>
+                            <a href="/index.php/index/courtTravel">体育健康</a>
                         </li>
                         <li>
-                            <a href="/think/public/index.php/index/courtTravel">讲座演出</a>
+                            <a href="/index.php/index/courtTravel">讲座演出</a>
                         </li>
                         <li>
-                            <a href="/think/public/index.php/index/courtTravel">社团活动</a>
+                            <a href="/index.php/index/courtTravel">社团活动</a>
                         </li>
                         <li>
-                            <a href="/think/public/index.php/index/courtTravel">艺术生活</a>
+                            <a href="/index.php/index/courtTravel">艺术生活</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/think/public/index.php/index/comfortable">教育教学</a>
+                    <a href="/index.php/index/comfortable">教育教学</a>
                     <ul>
                         <li>
-                            <a href="/think/public/index.php/index/comfortable">师资队伍</a>
+                            <a href="/index.php/index/comfortable">师资队伍</a>
                         </li>
                         <li>
-                            <a href="/think/public/index.php/index/comfortable">教学网</a>
+                            <a href="/index.php/index/comfortable">教学网</a>
                         </li>
                         <li>
-                            <a href="/think/public/index.php/index/comfortable">课表查询</a>
+                            <a href="/index.php/index/comfortable">课表查询</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/think/public/index.php/index/news">新闻动态</a>
+                    <a href="/index.php/index/news">新闻动态</a>
                     <ul>
                         <li>
-                            <a href="/think/public/index.php/index/news">校园新闻</a>
+                            <a href="/index.php/index/news">校园新闻</a>
                         </li>
                         <li>
-                            <a href="/think/public/index.php/index/news">专业新闻</a>
+                            <a href="/index.php/index/news">专业新闻</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/think/public/index.php/index/feedback">留言中心</a>
+                    <a href="/index.php/index/feedback">留言中心</a>
                 </li>
                 <li>
-                    <a href="/think/public/index.php/index/contact">联系我们</a>
+                    <a href="/index.php/index/contact">联系我们</a>
                 </li>
 
             </ul>
